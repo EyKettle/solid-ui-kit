@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# type-check gate artifacts
+.types-check/
+*.d.ts
+
+# environment
+.env
+.env*.local
+
+# editors
+/.idea
+.settings/
+*.launch
+
+# system files
+.DS_Store
+Thumbs.db
