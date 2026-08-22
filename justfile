@@ -17,7 +17,7 @@ verify-package:
     set -euo pipefail
     expected=$({
         echo package.json
-        for f in README.md LICENSE; do [ -f "$f" ] && echo "$f"; done
+        for f in README* LICENSE* LICENCE*; do [ -f "$f" ] && echo "$f"; done
         git ls-files --cached --others --exclude-standard src
     } | sort -u)
     actual=$(pnpm pack --dry-run --json | node -e '
