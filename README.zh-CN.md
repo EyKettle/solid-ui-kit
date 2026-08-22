@@ -1,31 +1,31 @@
-# Eykettle's UI kit
+# 电水壶的 UI 套件
 
-English | [中文](README.zh-CN.md)
+[English](README.md) | 中文
 
 <!--Not Ready-->
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-## Installation
+## 安装
 
 <!--Not Ready-->
 
-## Usage
+## 使用
 
 <!--Not Ready-->
 
-## Components
+## 组件
 
 <!--Not Ready-->
 
-## Development
+## 开发
 
 <!--Not Ready-->
 
-## Release
+## 发布版
 
 <!--Not Ready-->
 
-## License
+## 许可证
 
 <!--Not Ready-->
