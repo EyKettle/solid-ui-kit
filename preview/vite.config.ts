@@ -1,11 +1,15 @@
 import { defineConfig } from "vite";
 import solid from "@solidjs/vite-plugin";
+import checkDictionaries from "./plugins/check-dictionaries";
 
 export default defineConfig({
   // Turnkey client mode: no index.html and no mount file — the plugin
   // generates the entries around src/App.tsx, wrapped in src/Document.tsx.
   // `vite build` prerenders the shell into dist/client/index.html.
-  plugins: [solid({ start: true })],
+  plugins: [
+    checkDictionaries(),
+    solid({ start: { middleware: "./src/Middleware.ts" }, ssr: true }),
+  ],
   resolve: {
     // The preview site consumes the library by package name through its
     // `exports`, exactly like an external project does. Deduping the reactive
