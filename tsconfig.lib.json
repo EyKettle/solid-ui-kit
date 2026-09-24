@@ -1,10 +1,16 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    // The L4 boundary gate. rootDir rejects any import that escapes src/,
+    // so library sources cannot reach into preview/ or the repo root.
     "rootDir": "src",
+    // Required, and counter-intuitive: under noEmit TypeScript skips rootDir
+    // validation entirely and the gate silently passes every violation.
     "noEmit": false,
+    // Type-check and emit declarations only — no JS output.
     "declaration": true,
     "emitDeclarationOnly": true,
+    // Throwaway output. .gitignore excludes it along with stray *.d.ts.
     "outDir": ".types-check",
   },
   "include": ["src"],
