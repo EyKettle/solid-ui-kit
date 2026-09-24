@@ -9,8 +9,17 @@ export default function Document(props: ParentProps) {
     <html lang="en">
       <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <meta name="theme-color" content="#eee" />
+        <meta
+          name="theme-color"
+          content="#262626"
+          media="(prefers-color-scheme: dark)"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>eykt-ui preview</title>
         <HydrationScript />
       </head>
