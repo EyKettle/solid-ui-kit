@@ -1,6 +1,6 @@
 import type { Component } from "solid-js";
 import "./App.css";
-import { setLocale, t } from "./State";
+import { setLocale, t } from "#i18n";
 
 // Demos are discovered from the filesystem, so the component list never has to
 // be maintained a second time. Every demo default-exports a component.

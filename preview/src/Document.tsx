@@ -1,6 +1,6 @@
 import type { ParentProps } from "solid-js";
 import { HydrationScript } from "@solidjs/web";
-import { locale } from "./State";
+import { locale } from "#i18n";
 
 // The document shell picked up by the src/Document.* convention: it renders the
 // full <html> and is where head tags go. Compiled only into the prerendered

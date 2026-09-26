@@ -1,14 +1,14 @@
-import { getRequestEvent, parseCookieHeader } from "@solidjs/web";
-import { loadNamespaces, pickLocale } from "#i18n";
-import { bootNamespaces } from "../i18n/config";
+import { getRequestEvent } from "@solidjs/web";
+import { handleI18nRequest, I18nLocals } from "#i18n";
 
 export default [
-  async (request: Request, next: () => Promise<Response>) => {
+  async (_request: Request, next: () => Promise<Response>) => {
     const event = getRequestEvent()!;
-    event.locals.locale = pickLocale({
-      cookie: parseCookieHeader(request.headers.get("cookie"))["language"],
-    });
-    event.locals.dict = await loadNamespaces(event.locals.locale, bootNamespaces);
+    await handleI18nRequest(event);
     return next();
   },
 ];
+
+declare module "@solidjs/web" {
+  interface RequestEventLocals extends I18nLocals {}
+}
