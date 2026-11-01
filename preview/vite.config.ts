@@ -10,6 +10,7 @@ export default defineConfig({
     checkDictionaries(),
     solid({ start: { middleware: "./src/Middleware.ts" }, ssr: true }),
   ],
+  css: { modules: { localsConvention: "camelCaseOnly" } },
   resolve: {
     // The preview site consumes the library by package name through its
     // `exports`, exactly like an external project does. Deduping the reactive

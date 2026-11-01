@@ -4,6 +4,7 @@ dev:
 
 # Library boundary gate: type errors plus rootDir overrun (L4)
 check:
+    pnpm run css-types:check
     pnpm run check
 
 # Lint the library and the preview site

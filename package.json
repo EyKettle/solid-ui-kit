@@ -24,16 +24,20 @@
     "./composable/*": null
   },
   "scripts": {
+    "css-types": "typed-scss-modules \"src/**/*.module.scss\" --exportType default --nameFormat camel",
+    "css-types:check": "typed-scss-modules \"src/**/*.module.scss\" --exportType default --nameFormat camel --listDifferent",
     "check": "tsc -p tsconfig.lib.json",
     "lint": "oxlint -c oxlint.config.mjs src preview"
   },
   "peerDependencies": {
-    "@solidjs/web": "^2.0.0-rc.0",
-    "solid-js": "^2.0.0-rc.0"
+    "@solidjs/web": "^2.0.0-rc.18",
+    "solid-js": "^2.0.0-rc.18"
   },
   "devDependencies": {
-    "eslint-plugin-solid": "~0.16.0",
+    "eslint-plugin-solid": "~0.16.1",
     "oxlint": "~1.79.0",
+    "sass": "^1.106.1",
+    "typed-scss-modules": "^8.1.1",
     "typescript": "7.0.2"
   }
 }
