@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "useTabs": true,
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "dist",
+    "preview/dist",
+    "pnpm-lock.yaml",
+    "package-lock.json",
+    "yarn.lock",
+    "*.md",
+    "*.mdx",
+    "src/**/*.module.scss.d.ts",
+    "src/styles/tokens.css"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.json",
+        "*.jsonc",
+        "*.json5",
+        "*.yaml",
+        "*.yml"
+      ],
+      "options": {
+        "useTabs": false
+      }
+    }
+  ]
+}
