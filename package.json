@@ -34,10 +34,12 @@
     "solid-js": "^2.0.0-rc.18"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "eslint-plugin-solid": "~0.16.1",
     "oxfmt": "^0.75.0",
     "oxlint": "~1.79.0",
     "sass": "^1.106.1",
+    "tsx": "^4.23.15",
     "typed-scss-modules": "^8.1.1",
     "typescript": "7.0.2"
   }
